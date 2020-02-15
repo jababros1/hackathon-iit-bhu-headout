@@ -87,17 +87,6 @@ app.post("/related", function(req, res) {
   });
 });
 
-//deletion route of the completed work
-app.post("/delete", function(req, res) {
-  const ID = req.body.checkbox
-  item.findByIdAndRemove(ID, function(err) {
-    if (err) {
-      console.log(err)
-    } else {
-      res.redirect("/")
-    }
-  })
-});
 
 //end................................................................
 app.listen(3000, function() {
